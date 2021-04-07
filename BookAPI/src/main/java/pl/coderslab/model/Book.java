@@ -1,11 +1,33 @@
-package pl.coderslab.domain;
+package pl.coderslab.model;
 
+import org.hibernate.validator.constraints.ISBN;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "books")
 public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
+    @Size(min= 5, max=13)
     private String isbn;
+    @NotBlank
+    @Pattern(regexp = "[A-Z][a-zA-Z]*")
     private String title;
+    @NotBlank
+    @Pattern(regexp = "[A-Z][a-zA-Z]*")
     private String author;
+    @NotBlank
+    @Pattern(regexp = "[A-Z][a-zA-Z]*")
     private String publisher;
+    @NotBlank
+    @Pattern(regexp = "[A-Z][a-zA-Z]*")
     private String type;
 
     public Book() { }

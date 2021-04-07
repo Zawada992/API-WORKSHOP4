@@ -1,7 +1,8 @@
 package pl.coderslab.service;
 
 import org.springframework.stereotype.Component;
-import pl.coderslab.domain.Book;
+import pl.coderslab.model.Book;
+
 
 import java.util.List;
 import java.util.Optional;

@@ -1,10 +1,9 @@
 package pl.coderslab.controller;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import pl.coderslab.domain.Book;
+import pl.coderslab.model.Book;
 import pl.coderslab.service.BookService;
 
 
